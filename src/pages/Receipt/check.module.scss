@@ -22,7 +22,7 @@
   .back{
     position: absolute;
     top: 50%;
-    left: 60mm;
+    left: 120mm;
     width: 35px;
     height: 35px;
     background: #222;
@@ -39,7 +39,7 @@
   .print{
     position: absolute;
     top: 50%;
-    left: 80mm;
+    left: 140mm;
     width: 35px;
     height: 35px;
     background: #222;
@@ -56,17 +56,16 @@
 ::selection {background: #f31544; color: #FFF;}
 ::moz-selection {background: #f31544; color: #FFF;}
 h1{
-  font-size: 1.5em;
   color: #222;
 }
-h2{font-size: .9em;}
+h2{font-size: 12px;}
 h3{
-  font-size: 1.2em;
+  font-size: 10px;
   font-weight: 300;
   line-height: 2em;
 }
 p{
-  font-size: .7em;
+  font-size: 12px;
   color: #666;
   line-height: 1.2em;
 }
@@ -122,10 +121,13 @@ td{
   border-bottom: 1px solid #EEE;
   display: flex;
   justify-content: space-between;
+  font-size: 24px;
+  
   div{
-    width: 33%;
+    width: 45%;
     display: flex;
     justify-content: space-between;
+    
   }
 }
 .item{width: 24mm;}
