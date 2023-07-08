@@ -18,7 +18,7 @@ const createWindow = () => {
 
   mainWindow.setMenuBarVisibility(false);
 
-  mainWindow.loadURL('http://localhost:3000')
+  mainWindow.loadURL('pos-da-vinci.netlify.app')
 
 };
 
