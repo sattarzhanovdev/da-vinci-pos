@@ -14,6 +14,11 @@ const Card = ({item}) => {
     }
     localStorage.setItem('orders', JSON.stringify(orders));
   }
+
+  const toReceipt = () => {
+    localStorage.setItem('receipt', JSON.stringify(item.data))
+    Navigate('/check/')
+  }
   return (
     <div className={c.card} style={{width: '250px', border: '1px solid black'}}>
       <div className="card-header border-0">
@@ -21,7 +26,7 @@ const Card = ({item}) => {
       </div>
       <div className={c.cardBody}>
         <button onClick={() => deleteItem()}>Отменен</button>
-        <button onClick={() => Navigate('/check/')}>Закрыть</button>
+        <button onClick={() => toReceipt()}>Закрыть</button>
       </div>
     </div>
   )

@@ -5,8 +5,9 @@ import { useNavigate } from 'react-router-dom'
 import { BiPrinter } from 'react-icons/bi'
 
 const Receipt = () => {
-  const item = [{count: 37, id: "-NZo0LKLRsZfFAq8moAO", image: "https://firebasestorage.googleapis.com/v0/b/da-vinci-29325.appspot.com/o/1667018440_3-20.jpg?alt=media&token=d47dd807-01f6-4234-8197-b799ab0b5ade", price: "90", title: "Латте"}]
 
+  const item = JSON.parse(localStorage.getItem('receipt'))
+  
   const navigate = useNavigate()
   
   return (
