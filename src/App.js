@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import MainRoutes from "./routes";
+import './App.scss'
+import axios from "axios";
+import * as firebase from 'firebase/app'
+import { firebaseConfig } from "./firebase";
+import { getStorage } from 'firebase/storage'
+
+axios.defaults.baseURL = 'https://da-vinci-29325-default-rtdb.asia-southeast1.firebasedatabase.app'
+
+const app = firebase.initializeApp(firebaseConfig)
+export const storage = getStorage(app);
+
 
 function App() {
+  const newOrder = localStorage.getItem('orders')
+
+  React.useEffect(() => {
+    !newOrder && localStorage.setItem('orders', JSON.stringify([]))
+  })
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MainRoutes />
     </div>
   );
 }

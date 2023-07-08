@@ -1,0 +1,36 @@
+tr{
+  display: flex;
+  align-items: center;
+  &.total{
+    margin-top: 20px;
+    .pad{
+      td{
+        font-weight: bold;
+        font-size: 16px;
+      }
+    }
+  }
+  .pad{
+    margin-right: 8px;
+    width: 43%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 10px 0;
+    .trash{
+      color: red;
+      font-size: 20px;
+      cursor: pointer;
+      position: relative;
+      right: -30px;
+    }
+    td{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:nth-child(2){
+        margin-left: 75px;
+      }
+    }
+  }
+}

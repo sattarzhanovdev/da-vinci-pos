@@ -1,0 +1,75 @@
+.add{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  .addProducts{
+    width: 90%;
+    .back{
+      width: 35px;
+      height: 35px;
+      background: black;
+      color: white;
+      position: absolute;
+      left: 25px;
+      top: 25px;
+      font-size: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    }
+    .up{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 2px solid black;
+      button{
+        width: 200px;
+        height: 34px;
+        border-radius: 50px;
+        border: 0;
+        background: #4caf50;
+        color: white;
+      }
+    }
+    .down{
+      table{
+        padding: 10px 0;
+        width: 100%;
+        thead{
+          tr{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+        }
+        tbody{
+          width: 100%;
+          tr{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            &:hover{
+              background: #F5F5F5;
+            }
+            td{
+              img{
+                width: 35px;
+                height: 35px;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 50%;
+                border: 1px solid black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

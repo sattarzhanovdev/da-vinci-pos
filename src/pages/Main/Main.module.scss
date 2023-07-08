@@ -1,0 +1,47 @@
+.main{
+  .up{
+    width: 100%;
+    height: 20%;
+    button{
+      width: 200px;
+      height: 50px;
+      background: white;
+      border: 2px solid black;
+      border-radius: 10px;
+      color: black;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 25px;
+    }
+  }
+  .body{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+      width: 250px;
+    }
+  }
+  .footer{
+    width: 100%;
+    height: 10%;
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    button{
+      width: 250px;
+      height: 50px;
+      background: white;
+      border: 2px solid black;
+      border-radius: 10px;
+      color: black;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.orders{
+  .back{
+    width: 35px;
+    height: 35px;
+    background: black;
+    color: white;
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  .cards{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px ;
+    gap: 25px;
+    div{
+      padding: 0 10px;
+      .cardBody{
+        margin: 10px 0;
+        display: flex;
+        gap: 10px;
+        button{
+          width: 100px;
+          height: 38px;
+          border-radius: 60px;
+          background: none;
+          cursor: pointer;
+          &:nth-child(1){
+            border: 2px solid red;
+          }
+          &:nth-child(2){
+            border: 2px solid green;
+          }
+        }
+      }
+    }
+  }
+}
