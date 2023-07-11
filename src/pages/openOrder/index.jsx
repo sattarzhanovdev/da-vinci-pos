@@ -14,6 +14,7 @@ const OpenOrder = () => {
 
   const Navigate = useNavigate()
 
+
   React.useEffect(() => {
     REQUEST.getProducts()
       .then(res => {
@@ -37,12 +38,21 @@ const OpenOrder = () => {
   }, [dep])
 
   const orders = JSON.parse(localStorage.getItem('orders'))
-
+  
   const postToOrders = () => {
-    orders?.push({data, table: table})
-    localStorage.setItem('orders',  JSON.stringify(orders))
-    localStorage.setItem('newOrder',  JSON.stringify([]))
-    Navigate('/')
+    const check = orders?.find(item => item.table === table)
+    const index = orders.findIndex(obj => obj.table === table);
+    if(!check){
+      orders?.push({data, table: table})
+      localStorage.setItem('orders',  JSON.stringify(orders))
+      localStorage.setItem('newOrder',  JSON.stringify([]))
+      Navigate('/')
+    }else{
+      data.map(item => orders[index].data.push(item))
+      localStorage.setItem('orders',  JSON.stringify(orders))
+      localStorage.setItem('newOrder',  JSON.stringify([]))
+      Navigate('/')
+    }
   }
 
   return (
