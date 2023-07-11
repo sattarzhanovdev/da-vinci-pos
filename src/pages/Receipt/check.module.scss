@@ -1,11 +1,12 @@
 @media print {
   #invoicePos{
-    width: 105mm;
+    width: 88mm;
   }
 }
 
 @page {
-  size: 105mm;
+  width: 88mm;
+  size: 88mm;
   margin: 0;
 }
 
