@@ -4,6 +4,7 @@ import c from './card.module.scss'
 
 const Card = ({item}) => {
   const orders = JSON.parse(localStorage.getItem('orders'))
+  const [ table, setTable ] = React.useState(0)
 
   const Navigate = useNavigate()
 
@@ -15,6 +16,8 @@ const Card = ({item}) => {
     localStorage.setItem('orders', JSON.stringify(orders));
   }
 
+  
+  
   const toReceipt = () => {
     localStorage.setItem('receipt', JSON.stringify(item.data))
     Navigate('/check/')

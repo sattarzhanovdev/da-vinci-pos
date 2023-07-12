@@ -9,7 +9,12 @@ const Receipt = () => {
   const item = JSON.parse(localStorage.getItem('receipt'))
   
   const navigate = useNavigate()
-  
+
+  const summa = item?.reduce((acc, obj) => acc + obj.count * obj.price, 0)
+  const percent = summa * 0.1
+  const newSumma = summa + percent
+
+    
   return (
     <div id={c.invoicePos}>
       <div id={c.bot}>
@@ -33,10 +38,15 @@ const Receipt = () => {
               ))
             }
 
-            <tr className={c.tabletitle}>
+            <tr className={c.tabletitle} id={c.total}>
               <td></td>
-              <td className={c.Rate}><h2>Итого:</h2></td>
+              <td className={c.Rate}><h2>Всего:</h2></td>
               <td className={c.payment}><h2>{item?.reduce((acc, obj) => acc + obj.count * obj.price, 0)} сом </h2></td>
+            </tr>
+            <tr className={c.tabletitle} id={c.service}>
+              <td>Обслуживание: 10%</td>
+              <td className={c.Rate}><h2>Итого:</h2></td>
+              <td className={c.payment}><h2>{Math.floor(newSumma)} сом </h2></td>
             </tr>
 
           </table>

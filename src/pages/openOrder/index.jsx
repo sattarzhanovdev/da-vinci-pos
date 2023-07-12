@@ -11,6 +11,7 @@ const OpenOrder = () => {
   const [ data, setData ] = React.useState(null)
   const [ dep, setDep ] = React.useState(null)
   const [ table, setTable ] = React.useState(0)
+  const [ result, setResult ] = React.useState(null)
 
   const Navigate = useNavigate()
 
@@ -36,12 +37,13 @@ const OpenOrder = () => {
       setDep(Math.random())
     }, 100)
   }, [dep])
-
-  const orders = JSON.parse(localStorage.getItem('orders'))
   
+  const orders = JSON.parse(localStorage.getItem('orders'))
+
   const postToOrders = () => {
     const check = orders?.find(item => item.table === table)
     const index = orders.findIndex(obj => obj.table === table);
+
     if(!check){
       orders?.push({data, table: table})
       localStorage.setItem('orders',  JSON.stringify(orders))
