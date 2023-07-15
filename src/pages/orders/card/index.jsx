@@ -30,6 +30,7 @@ const Card = ({item}) => {
       <div className={c.cardBody}>
         <button onClick={() => deleteItem()}>Отменен</button>
         <button onClick={() => toReceipt()}>Закрыть</button>
+        <button onClick={() => deleteItem()}>Удалить</button>
       </div>
     </div>
   )

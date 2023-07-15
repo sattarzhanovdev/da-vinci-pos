@@ -2,7 +2,7 @@ import React from 'react'
 import c from './check.module.scss'
 import { IoIosArrowRoundBack } from 'react-icons/io'
 import { useNavigate } from 'react-router-dom'
-import { BiPrinter } from 'react-icons/bi'
+import { BiPrinter, BiTrash } from 'react-icons/bi'
 
 const Receipt = () => {
 
@@ -14,7 +14,6 @@ const Receipt = () => {
   const percent = summa * 0.1
   const newSumma = summa + percent
 
-    
   return (
     <div id={c.invoicePos}>
       <div id={c.bot}>
